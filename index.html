@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>ICT 10 PYTHON</title>
+
+    <style>
+        body {
+            text-align: center;
+            color: #452829;
+
+        }
+
+        span {
+            color: #E67E22;
+        }
+
+        button {
+         border-radius: 30px;
+         width: 150px;
+         height: 50px;
+         background-color: #57595B;
+         color: #ECD5BC;
+         border-color: white;
+        }
+
+        h3 {
+            font-size: 40px;
+        }
+
+        input {
+            border-radius: 30px;
+            width: 250px;
+            height: 50px;
+        }
+    </style>
+    
+    <body>
+        <div class="container">
+
+            <h3>Student <span>Information</span></h3>
+            <input type="text" placeholder="First Name" id="firstName">
+            <br><br>
+            <input type="text" placeholder="Last Name" id="lastName">
+            <br><br>
+            <input type="text" placeholder="Grade & Section" id="gradeSection">
+            <br><br>
+            <input type="number" placeholder="Student Number" id="idNumber">
+
+            <br><br>
+
+            <div class="_attendance" id="attendance_val">
+                <h3>Attendance</h3>
+                <div class="schoolDays">
+                    <h4>Total School Days</h4>
+                    <input type="number" id="total_days">
+                </div>
+
+                <div class="schoolDays">
+                    <h4>Days Present</h4>
+                    <input type="number" id="present_days">
+                </div>
+            </div>
+
+            <br><br>
+
+            <h3>Assessment <span>Scores</span></h3>
+            <div class="all_quiz_scores" id="allQuiz">
+                <div class="performance">
+                    <h4>Drill 1</h4>
+                    <input type="number" id="grades_Drill1">
+                </div>
+
+                <div class="performance">
+                    <h4>Drill 2</h4>
+                    <input type="number" id="grades_Drill2">
+                </div>
+
+                    <div class="performance">
+                    <h4>Seatwork 1</h4>
+                    <input type="number" id="grades_SW1">
+                </div>
+
+                    <div class="performance">
+                    <h4>Seatwork 2</h4>
+                    <input type="number" id="grades_SW2">
+                </div>
+
+                    <div class="performance">
+                    <h4>Skills Test</h4>
+                    <input type="number" id="grades_Skills">
+                </div>
+            </div>
+        </div>
+
+            <br><br>
+
+            <button py-click="performance_button">Calculate</button>
+
+            <br><br>
+
+            <div id="studentInfo"></div>
+            <div id="attendance_place"></div>
+            <div id="quizBreakdown"></div>
+            <div id="finalPerformanceRating"></div>
+        </div>
+        </div>
+    </body>
+
+    <script type="py" src="main.py"></script>
+    </head>
+    </html>
